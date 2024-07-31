@@ -1,0 +1,36 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0rem;
+  
+    .logo {
+      height: 40px;
+    }
+  
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 1.5rem;
+  
+      li a {
+        text-decoration: none;
+        color: #000;
+        font-weight: 500;
+        font-size: 1.2rem;
+
+        @media (max-width: 768px) {
+            font-size: 1rem;
+          }
+  
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+  
+      .active a {
+        text-decoration: underline;
+      }
+    }
+  }
+  

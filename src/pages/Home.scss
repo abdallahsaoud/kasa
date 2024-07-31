@@ -1,0 +1,20 @@
+.home {
+    .card-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+      gap: 20px;
+      padding: 20px;
+      background-color: #f0f0f0; // Gris clair
+      border-radius: 15px; // Coins arrondis
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); // Ombre légère
+      margin-bottom: 20px;
+
+      @media (max-width: 768px) { // Taille d'écran pour les mobiles
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        padding: 0;
+      }
+    }
+  }
+  
+
+  

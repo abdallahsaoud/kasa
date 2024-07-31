@@ -1,0 +1,36 @@
+.card {
+    background-color: transparent;
+    border-radius: 10px;
+    overflow: hidden;
+    text-decoration: none;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    position: relative;
+    width: 100%;
+    height: 340px;
+  
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  
+    h2 {
+      margin: 0;
+      padding: 1rem;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(0, 0, 0, 0.5);
+      transition: background 0.3s, color 0.3s;
+    }
+  
+    &:hover h2 {
+      background: rgba(0, 0, 0, 0.5);
+      color: #ff6060; // même couleur que le logo Kasa
+    }
+  }
+  
