@@ -16,6 +16,8 @@ const Property = () => {
     return <NotFound />;
   }
 
+  const [firstName, lastName] = property.host.name.split(' ');
+
   return (
     <div className="property">
       <Gallery pictures={property.pictures} />
@@ -31,7 +33,7 @@ const Property = () => {
         </div>
         <div className="info-right">
           <div className="host">
-            <p className="host-name">{property.host.name}</p>
+            <p className="host-name">{firstName}<br />{lastName}</p>
             <img src={property.host.picture} alt={property.host.name} className="host-picture" />
           </div>
           <div className="rating">

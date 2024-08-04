@@ -1,14 +1,14 @@
+// About.jsx
 import React from 'react';
 import './About.scss';
-import BannerImage from '../assets/banner.jpg'; // Assurez-vous que l'image du banner est bien placée dans le dossier assets
-import Collapse from '../components/Collapse'; // Assurez-vous que Collapse est dans le bon chemin
+import Banner from '../components/Banner';
+import BannerImage from '../assets/banner.jpg'; // Ensure the image is placed in the assets folder
+import Collapse from '../components/Collapse';
 
 const About = () => {
   return (
     <div className="about">
-      <div className="banner">
-        <img src={BannerImage} alt="Banner" />
-      </div>
+      <Banner text="" image={BannerImage} />
       <div className="collapses">
         <Collapse label="Fiabilité">
           <p>Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements, et toutes les informations sont régulièrement vérifiées par nos équipe.</p>

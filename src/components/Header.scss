@@ -5,7 +5,12 @@
     padding: 1rem 0rem;
   
     .logo {
-      height: 40px;
+      height: 68px;
+
+      @media (max-width: 500px) {
+        height: 46.88px;
+      }
+
     }
   
     nav ul {
@@ -17,10 +22,10 @@
         text-decoration: none;
         color: #000;
         font-weight: 500;
-        font-size: 1.2rem;
+        font-size: 24px;
 
-        @media (max-width: 768px) {
-            font-size: 1rem;
+        @media (max-width: 500px) {
+            font-size: 12px;
           }
   
         &:hover {

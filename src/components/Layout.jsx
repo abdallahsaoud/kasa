@@ -5,7 +5,7 @@ import Footer from './Footer';
 import './Layout.scss';
 
 const Layout = ({ children }) => (
-  <div>
+  <div className="layout-container">
     <main className="container">
     <Header />
     

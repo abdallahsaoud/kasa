@@ -1,10 +1,18 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import './Collapse.scss';
-import ArrowIcon from '../assets/ArrowIcon.svg'; // Assurez-vous d'importer votre SVG
+import ArrowIcon from '../assets/ArrowIcon.svg';
 
 const Collapse = ({ label, children }) => {
   const [isOpen, setIsOpen] = useState(false);
+  const contentRef = useRef(null);
+  const [height, setHeight] = useState('0px');
+
+  useEffect(() => {
+    if (contentRef.current) {
+      setHeight(isOpen ? `${contentRef.current.scrollHeight}px` : '0px');
+    }
+  }, [isOpen]);
 
   const toggle = () => {
     setIsOpen(!isOpen);
@@ -16,7 +24,12 @@ const Collapse = ({ label, children }) => {
         {label}
         <img src={ArrowIcon} alt="arrow icon" className="arrow" />
       </button>
-      {isOpen && <div className="collapse-content">{children}</div>}
+      <div
+        ref={contentRef}
+        className={`collapse-content ${isOpen ? 'open' : ''}`}
+      >
+        {children}
+      </div>
     </div>
   );
 };

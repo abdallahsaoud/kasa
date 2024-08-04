@@ -1,11 +1,11 @@
+// Banner.jsx
 import React from 'react';
 import PropTypes from 'prop-types';
 import './Banner.scss';
-import backgroundImage from '../assets/Image source 1.png'; 
 
-const Banner = ({ text }) => (
+const Banner = ({ text, image }) => (
   <div className="banner">
-    <div className="banner-image" style={{ backgroundImage: `url(${backgroundImage})` }}>
+    <div className="banner-image" style={{ backgroundImage: `url(${image})` }}>
       <h1>{text}</h1>
     </div>
   </div>
@@ -13,6 +13,7 @@ const Banner = ({ text }) => (
 
 Banner.propTypes = {
   text: PropTypes.string.isRequired,
+  image: PropTypes.string.isRequired,
 };
 
 export default Banner;
